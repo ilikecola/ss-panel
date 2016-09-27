@@ -1,5 +1,5 @@
 {include file='auth/header.tpl'}
-<body class="login-page">
+<body class="login-page"  style="background-image:url('https://ss.remiliascarlet.tk/bg.jpg');position: fixed;background-repeat:no-repeat;width:100%;height:100%;z-index:900;max-width:none;background-size: cover;">
 <div class="login-box">
     <div class="login-logo">
         <a href="#"><b>{$config['appName']}</b></a>
