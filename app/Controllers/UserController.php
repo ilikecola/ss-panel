@@ -172,8 +172,8 @@ class UserController extends BaseController
     public function updateprotocol($request, $response, $args)
     {
         $user = Auth::getUser();
-        $method = $request->getParam('protocol');
-        $method = strtolower($protocol);
+        $protocol = $request->getParam('protocol');
+        $protocol = strtolower($protocol);
         $user->updateprotocol($protocol);
         $res['ret'] = 1;
         return $this->echoJson($response, $res);
@@ -182,8 +182,8 @@ class UserController extends BaseController
     public function updateobfs($request, $response, $args)
     {
         $user = Auth::getUser();
-        $method = $request->getParam('obfs');
-        $method = strtolower($obfs);
+        $obfs = $request->getParam('obfs');
+        $obfs = strtolower($obfs);
         $user->updateeobfs($obfs);
         $res['ret'] = 1;
         return $this->echoJson($response, $res);
