@@ -302,7 +302,7 @@
                 error: function (jqXHR) {
                     alert("发生错误：" + jqXHR.status);
                 }
-            })
+            })            
         })
     })
 </script>
