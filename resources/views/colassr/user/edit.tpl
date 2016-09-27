@@ -303,6 +303,7 @@
                     alert("发生错误：" + jqXHR.status);
                 }
             })
+            console.log($("#obfs").val());
         })
     })
 </script>
