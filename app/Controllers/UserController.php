@@ -184,7 +184,7 @@ class UserController extends BaseController
         $user = Auth::getUser();
         $obfs = $request->getParam('obfs');
         $obfs = strtolower($obfs);
-        $user->updateeobfs($obfs);
+        $user->updateobfs($obfs);
         $res['ret'] = 1;
         return $this->echoJson($response, $res);
     }
