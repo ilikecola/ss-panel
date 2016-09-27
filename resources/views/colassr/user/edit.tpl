@@ -261,7 +261,7 @@
                 url: "protocol",
                 dataType: "json",
                 data: {
-                    method: $("#protocol").val()
+                    protocol: $("#protocol").val()
                 },
                 success: function (data) {
                     if (data.ret) {
@@ -288,7 +288,7 @@
                 url: "obfs",
                 dataType: "json",
                 data: {
-                    method: $("#obfs").val()
+                    obfs: $("#obfs").val()
                 },
                 success: function (data) {
                     if (data.ret) {
