@@ -25,7 +25,7 @@
         </div>
 
         {foreach $nodes as $node}
-            <div class="row"{if $user->plan == "B"}style="display:none;"{/if}>
+            <div class="row"{if $user->plan == "B" && $node->plan == "2"}style="display:none;"{/if}>
                 <div class="col-md-12">
                     <div class="box box-widget">
                         <div class="box-body">
