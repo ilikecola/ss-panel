@@ -95,7 +95,7 @@ class User extends Model
     public function updateobfs($obfs)
     {
         $this->obfs = $obfs;
-        console.log($("#obfs").val());
+        console.log($obfs);
         $this->save();
     }
 
