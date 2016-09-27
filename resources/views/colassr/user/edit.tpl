@@ -121,6 +121,32 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">协议插件</label>
+
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <input type="text" id="protocol" placeholder="输入新协议插件" class="form-control">
+                                        <div class="input-group-btn">
+                                            <button type="submit" id="protocol-update" class="btn btn-primary">修改</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">混淆插件</label>
+
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <input type="text" id="obfs" placeholder="输入新混淆插件" class="form-control">
+                                        <div class="input-group-btn">
+                                            <button type="submit" id="obfs-update" class="btn btn-primary">修改</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                         <div class="box-footer"></div>
@@ -209,6 +235,60 @@
                 dataType: "json",
                 data: {
                     method: $("#method").val()
+                },
+                success: function (data) {
+                    if (data.ret) {
+                        $("#ss-msg-success").show();
+                        $("#ss-msg-success-p").html(data.msg);
+                    } else {
+                        $("#ss-msg-error").show();
+                        $("#ss-msg-error-p").html(data.msg);
+                    }
+                },
+                error: function (jqXHR) {
+                    alert("发生错误：" + jqXHR.status);
+                }
+            })
+        })
+    })
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#protocol-update").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "protocol",
+                dataType: "json",
+                data: {
+                    method: $("#protocol").val()
+                },
+                success: function (data) {
+                    if (data.ret) {
+                        $("#ss-msg-success").show();
+                        $("#ss-msg-success-p").html(data.msg);
+                    } else {
+                        $("#ss-msg-error").show();
+                        $("#ss-msg-error-p").html(data.msg);
+                    }
+                },
+                error: function (jqXHR) {
+                    alert("发生错误：" + jqXHR.status);
+                }
+            })
+        })
+    })
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#obfs-update").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "obfs",
+                dataType: "json",
+                data: {
+                    method: $("#obfs").val()
                 },
                 success: function (data) {
                     if (data.ret) {
