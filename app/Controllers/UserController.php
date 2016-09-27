@@ -186,6 +186,7 @@ class UserController extends BaseController
         $obfs = strtolower($obfs);
         $user->updateobfs($obfs);
         $res['ret'] = 1;
+        console.log($obfs);
         return $this->echoJson($response, $res);
     }
 
