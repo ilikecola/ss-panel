@@ -55,9 +55,9 @@
                                         <li><a href="./node/{$node->id}">加密方式 <span
                                                         class="pull-right badge bg-green">{if $node->custom_method == 1} {$user->method} {else} {$node->method} {/if}</span></a></li>
                                         <li><a href="./node/{$node->id}">连接协议 <span
-                                                        class="pull-right badge bg-aqua">{$node->protocol}</span></a></li>
+                                                        class="pull-right badge bg-aqua">{$user->protocol}</span></a></li>
                                         <li><a href="./node/{$node->id}">混淆协议 <span
-                                                        class="pull-right badge bg-aqua">{$node->obfs}</span></a></li>
+                                                        class="pull-right badge bg-aqua">{$user->obfs}</span></a></li>
                                         <li><a href="./node/{$node->id}">负载: <span
                                                         class="pull-right badge bg-green">{$node->getNodeLoad()}</span></a>
                                         </li>
